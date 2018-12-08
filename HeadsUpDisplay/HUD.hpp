@@ -11,7 +11,7 @@
 
 #include <stdio.h>
 
-#include "bargraph.hpp"
+#include "barGraph.hpp"
 #include "gauge.hpp"
 #include "textList.hpp"
 #include <list>
