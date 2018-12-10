@@ -10,6 +10,11 @@
 
 #include <iostream>
 #include "opencv2/imgproc.hpp"
+#include "opencv2/highgui.hpp"
+
+using namespace std;
+using namespace cv;
+
 
 using namespace std;
     
@@ -18,20 +23,25 @@ using namespace std;
     int width;
     int height;
 
+
+    Gauge::Gauge(int _x, int _y, int _lowerRange, int _upperRange, int _size, int _r, int _g, int _b, int _increment, int _startingValue, bool _showMin, bool _showMax){
+        
+        }
     Gauge::Gauge(int _x, int _y, int _lowerRange, int _upperRange, int _size, int _r, int _g, int _b){
         this->_xPos = _x;
         this->_yPos = _y;
         //this->lowerRange = _lowerRange;
-        //this->upperRange = _upperRange;/
+        //this->upperRange = _upperRange;
         //drawGauge();
     }
     
     void _drawGauge(int value){
-        //stuff
+        Mat img;
+        ellipse(img, Point(150,100), Size(100,70), 70, 200, 270, Scalar(255));
     }
     
     void updateGauge(){
-        //stuff
+        
     }
     
     void Gauge::_drawInitialGauge(int value, int r, int g, int b){
