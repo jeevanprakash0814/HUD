@@ -6,14 +6,24 @@
 //  Copyright © 2018 Jeevan Prakash. All rights reserved.
 //
 
+#include "opencv2/imgproc.hpp"
+#include "opencv2/imgcodecs.hpp"
+#include "opencv2/highgui.hpp"
 #include <iostream>
-//#include "gauge.cpp"
+#include <fstream>
+#include <unistd.h>
+#include <tuple>
+#include "gauge.hpp"
+
+using namespace cv;
+using namespace std;
 
 int main(int argc, const char * argv[]) {
     // insert code here...
     std::cout << "Hello, World!\n";
-    //Gauge *gauge = new Gauge(5,5,5,5,5,5,5,5);
-    //gauge->drawGauge();
+    Gauge *gauge = new Gauge(5,5,5,5,5,5,5,5);
+    Mat image = imread("/Users/jeevanprakash/Desktop/Funny/IMG_0620.PNG");
+    gauge->drawGauge(5,image);
     //delete gauge;
     return 0;
 }

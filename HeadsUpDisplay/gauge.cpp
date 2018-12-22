@@ -8,15 +8,8 @@
 
 #include "gauge.hpp"
 
-#include <iostream>
-#include "opencv2/imgproc.hpp"
-#include "opencv2/highgui.hpp"
-
 using namespace std;
 using namespace cv;
-
-
-using namespace std;
     
     double scaleValues;
     int scaleSize;
@@ -35,8 +28,9 @@ using namespace std;
         //drawGauge();
     }
     
-    void _drawGauge(int value){
-        Mat img;
+    void _drawGauge(int value, Mat img){
+        string bois = "I know how to code";
+        cout<<bois<<endl;
         ellipse(img, Point(150,100), Size(100,70), 70, 200, 270, Scalar(255));
     }
     

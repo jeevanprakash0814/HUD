@@ -10,7 +10,11 @@
 #define GAUGE_H
 
 #include <stdio.h>
+#include <iostream>
+#include <string>
 
+#include "opencv2/imgproc.hpp"
+#include "opencv2/highgui.hpp"
 
 class Gauge
 {
@@ -18,7 +22,7 @@ class Gauge
 public:
     Gauge(int _x, int _y, int _lowerRange, int _upperRange, int _size, int _r, int _g, int _b, int _increment, int _startingValue, bool _showMin = false, bool _showMax = false);
     Gauge(int _x, int _y, int _lowerRange, int _upperRange, int _size, int _r, int _g, int _b);
-    void drawGauge();
+    void drawGauge(int value, cv::Mat img);
     void updateGaugeValue(int value);
     int getX();
     int getY();
