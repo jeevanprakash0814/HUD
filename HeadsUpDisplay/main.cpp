@@ -20,10 +20,13 @@ using namespace std;
 
 int main(int argc, const char * argv[]) {
     // insert code here...
-    std::cout << "Hello, World!\n";
+    cout << "Hello, World!\n";
     Gauge *gauge = new Gauge(5,5,5,5,5,5,5,5);
+    cout << gauge->getX();
     Mat image = imread("/Users/jeevanprakash/Desktop/Funny/IMG_0620.PNG");
     gauge->drawGauge(5,image);
-    //delete gauge;
+    imshow("Test", image);
+    waitKey(0);
+    delete gauge;
     return 0;
 }
