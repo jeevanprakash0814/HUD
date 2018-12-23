@@ -29,9 +29,19 @@ using namespace cv;
     }
     
     void Gauge::drawGauge(int value, Mat img){
-        string bois = "I know how to code";
-        cout<<bois<<endl;
-        ellipse(img, Point(150,100), Size(100,70), 70, 200, 270, Scalar(255));
+        int thickness = 10;
+        int shift = 0;
+        int lineType = LINE_8;
+        int angleIncrement = 0;
+        int startAngle = 0;
+        int endAngle = 90;
+        int width = img.size().width;
+        int height = img.size().height;
+        cout<<width<<endl;
+        cout<<height<<endl;
+        
+        ellipse(img, Point(width/3-20,height/3+70), Size(50,50), angleIncrement, startAngle, endAngle, Scalar(220,248,255), thickness, lineType, shift);
+        ellipse(img, Point(width/3-40,(height/3)+70), Size(50,50), angleIncrement+77, startAngle, endAngle, Scalar(220,248,255,0.4), thickness, lineType, shift);
     }
     
     void Gauge::updateGaugeValue(int value){
@@ -55,7 +65,7 @@ using namespace cv;
     }
 
     int Gauge::getY(){
-    return 0;
+        return 0;
     }
     void Gauge::setX(int x){
     
@@ -64,13 +74,13 @@ using namespace cv;
     
     }
     int Gauge::getIncrement(){
-    return 0;
+        return 0;
     }
     void Gauge::setIncrement(int increment){
     
     }
     int Gauge::getGaugeValue(){
-    return 0;
+        return 0;
     }
     void Gauge::updateBackground(int r, int g, int b){
     

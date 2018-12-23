@@ -10,13 +10,18 @@
 #define TEXTLIST_H
 
 #include <stdio.h>
+#include <iostream>
+#include <string>
+
+#include "opencv2/imgproc.hpp"
+#include "opencv2/highgui.hpp"
 
 class TextList
 {
     
 public:
     TextList();
-    void drawList();
+    void drawList(int _accelerationValue, int _manipulatorMode, int _gearNumber, cv::Mat img);
     void updateMode(int accelerationValue, int manipulatorMode, int gearNumber);
     
 private:
@@ -29,7 +34,7 @@ private:
     int _manipulatorMode;
     int _gearNumber;
     
-    void _drawText(int _accelerationValue, int _manipulatorMode, int _gearNumber);
+    void _drawText(int _accelerationValue, int _manipulatorMode, int _gearNumber, cv::Mat img);
     void _drawBorder(int _widthBorder, int _heightBorder);
     
 };

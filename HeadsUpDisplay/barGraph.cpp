@@ -7,3 +7,17 @@
 //
 
 #include "barGraph.hpp"
+
+using namespace std;
+using namespace cv;
+
+    void BarGraph::drawGraph(){
+    
+    }
+    void BarGraph::updateGraph(int fill){
+    
+    }
+
+    void BarGraph::_drawGraph(int fill){
+    
+    }

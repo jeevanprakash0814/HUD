@@ -10,6 +10,11 @@
 #define BARGRAPH_H
 
 #include <stdio.h>
+#include <iostream>
+#include <string>
+
+#include "opencv2/imgproc.hpp"
+#include "opencv2/highgui.hpp"
 
 class BarGraph
 {
