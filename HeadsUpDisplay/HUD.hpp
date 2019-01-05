@@ -23,7 +23,7 @@ class HUD{
 public:
     HUD();
     list<BarGraph> queue1;
-    list<Gauge> queue2;
+    list<Gauge> queue2;//I can have multiple "orientations" for one of the constructors or something so that they aren't forced  to input the start and end angles
     list<TextList> queue3;
     
 private:
